@@ -56,6 +56,49 @@
 * C-x C-s      保存文件
 
 ### BUFFERS
+* C-x C-b      列出所有缓冲区
+* C-x b        找到并打开缓冲区
+
+* C-x s        询问保存多个缓冲区
+
+### 命令集扩展
+* C-x          字符扩展
+* M-x          命令名扩展
+
+* C-z          挂起emacs
+* fg[%emacs]   返回emacs
+
+* M-x repl s<Return> <Return>
+　　　　　　　替换字符
+* M-x recover file<Return> 
+              从自动保存中恢复文档
+
+### 搜索
+* C-s         向前搜索
+* C-r         向后搜索
+
+### 多窗格
+* C-M-v       下一个窗格向后翻页
+* C-M-S-v     下一个窗格向前翻页
+
+* C-x o       光标转移窗格
+
+### 多窗口
+* M-x make-frame<Return>
+              打开新窗口
+* M-x delete-frame<Return>
+              关闭新窗口
+
+###　获得更多帮助
+* C-h c       命令的简要说明
+* C-h k       新窗格中显示文档
+* C-h f       解释一个函数
+
+* C-h i       打开info手册
+
+
+
+
 
 
 
