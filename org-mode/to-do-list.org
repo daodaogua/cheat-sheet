@@ -1,5 +1,9 @@
 * org-mode 学习项目
-** TODO TODO功能
+** HOLD TODO功能 
 ** TODO 任务时间管理
-** TODO 大纲
+** DONE 大纲
+   CLOSED: [2019-01-08 二 18:03]
+   :LOGBOOK:  
+   - State "DONE"       from "TODO"       [2019-01-08 二 18:03]
+   :END:      
 ** TODO 发布
