@@ -32,6 +32,7 @@
 *** 复选框
 　- []         放在任务步骤之前可以很合适的将任务分步
 
+
 ** 时间戳
 
 时间戳有激活<2019-01-08 二>和非激活时间戳[2019-01-08 二]
@@ -49,4 +50,25 @@
   - C-c C-s SCHEDULED: <2019-01-08 二>
   - C-c C-d DEADLINE: <2019-01-08 二>
 
+
+
+
+** 导出
+
+  - C-c C-e    用来导出和发布的调度器
+
+*** 附加信息
+#+TITLE:       the title to be shown (default is the buffer name)
+#+AUTHOR:      the author (default taken from user-full-name)
+#+DATE:        a date, fixed, of a format string for format-time-string
+#+EMAIL:       his/her email address (default from user-mail-address)
+#+DESCRIPTION: the page description, e.g. for the XHTML meta tag
+#+KEYWORDS:    the page keywords, e.g. for the XHTML meta tag
+#+LANGUAGE:    language for HTML, e.g. ‘en’ (org-export-default-language)
+#+TEXT:        Some descriptive text to be inserted at the beginning.
+#+TEXT:        Several lines may be given.
+#+OPTIONS:     H:2 num:t toc:t \n:nil @:t ::t |:t ^:t f:t TeX:t ...
+#+LINK_UP:     the ``up'' link of an exported page
+#+LINK_HOME:   the ``home'' link of an exported page
+#+LATEX_HEADER: extra line(s) for the LaTeX header, like \usepackage{xyz}
 
