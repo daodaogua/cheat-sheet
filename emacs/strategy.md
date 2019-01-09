@@ -1,5 +1,5 @@
 ### 参考资料
-[mastering-emacs-in-one-year-guide](https://github.com/redguardtoo/mastering-emacs-in-one-year-guide)
+[mastering-emacs-in-one-year-guide](https://github.com/redguardtoo/mastering-emacs-in-one-year-guide) <br>
 [emacsWiki](https://www.emacswiki.org/)
 
 #### 推荐配置
