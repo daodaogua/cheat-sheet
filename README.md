@@ -10,3 +10,8 @@
 
 ## [mongoDB](https://github.com/daodaogua/cheat-sheet/tree/master/MongoDB)
 
+## [RabbitMQ](https://github.com/daodaogua/cheat-sheet/tree/master/RabbitMQ)
+
+## [supervisor](https://github.com/daodaogua/cheat-sheet/tree/master/supervisor)
+
+## [torch](https://github.com/daodaogua/cheat-sheet/tree/master/Torch)
