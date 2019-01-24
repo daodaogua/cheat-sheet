@@ -1,0 +1,7 @@
+*** ssh
+    - ssh 使用时不推荐使用root,不然需要授权
+
+*** mongodb
+    - mongoexport: Json, 不推荐db备份
+    - mongodump: bson, db备份
+    - 图形化工具
