@@ -72,3 +72,9 @@
 #+LINK_HOME:   the ``home'' link of an exported page
 #+LATEX_HEADER: extra line(s) for the LaTeX header, like \usepackage{xyz}
 
+
+** #+ 排版
+*** 图
+  - 图上方
+  - #+CAPTION:
+  - #+ATTR_HTML: :/#+ATTR_ORG: :/#+ATTR_latex: :    width 
