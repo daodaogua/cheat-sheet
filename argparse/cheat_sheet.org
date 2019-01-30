@@ -32,3 +32,38 @@ $ python prog.py 1 2 3 4 # terminal 执行
 $ python prog.py 1 2 3 4 --sum # terminal 执行
 10
 #+END_SRC
+
+
+*** API简介
+
+**** argparse.ArgumentParser(prog=None, usage=None, description=None, epilog=None, parents=[], formatter_class=argparse.HelpFormatter, prefix_chars='-', fromfile_prefix_chars=None, argument_default=None, conflict_handler='error', add_help=True, allow_abbrev=True
+     - 了解keyword可帮助help输出
+
+**** ArgumentParser.add_argument(name or flags...[, action][, nargs][, const][, default][, type][, choices][, required][, help][, metavar][, dest])
+     - name or flags
+       - 可选argument: 必须加prefix:-,可以是一系列flags
+       - positional argument
+     - action: command-line arguments的action
+       - store: default
+       - store_const: const可以是func
+       - store_true/store_false
+       - append
+       - append_const
+       - count
+       - help
+       - version
+       - 自定义action函数
+     - nargs
+       - N(an integer)
+       - ?
+         - 1个item
+         - 输入输出
+         - 配合const,default
+       - *: 收集成list
+       - +:同*,但如果一个item都没有,会报错
+     - const: 当action为store_const/append_const,可将const赋给args对应属性
+     - default
+     - type:可以是文件操作类型...
+     - metavar: help信息中command-line arguments的name
+     - dest: args对应属性名
+**** ArgumentParser.parse_args(args=None, namespace=None)
