@@ -1,0 +1,38 @@
+** 说明
+*** UFS统一文件系统
+*** UROFS统一只读文件系统:Read layers
+*** 镜像和容器
+- 镜像: UROFS
+- 容器: 顶层RWL读写层+隔离的进程空间和进程(ID)
+- 容器-->commit-->镜像
+
+** Demo
+*** 获取镜像
+- pull
+*** 构建镜像
+- build
+  - Dockerfile
+
+  - 说明:
+    - 可以看出RUN后面跟的其实就是一些shell命令，通过&&将这些脚本连接在了一行执行，这么做的原因是为了减少镜像的层数，每多一行RUN都会给镜像增加一层，所以这里选择将所有命令联结在一起执行以减少层数
+
+
+*** 使用容器
+- run 创建或运行一个容器(交互式,后台,一次性)
+  - eg.(交互式) docker run -i -t <container> /bin/bash / docker exec -it <container> /bin/sh
+
+
+*** 细节
+- login 连接仓库
+- ps 查看容器
+- image 管理镜像
+- stop 停止容器
+- tag 打标签
+- rm 删除
+- export
+
+
+*** 资料
+- [[https://www.runoob.com/docker/docker-command-manual.html][命令大全]]
+- [[https://www.cnblogs.com/bethal/p/5942369.html][参考]]
+- [[https://docs.docker.com/engine/reference/builder/][dockerFile文档]]
