@@ -1,0 +1,29 @@
+*** 资料
+- [[https://www.iteblog.com/archives/2504.html?from=like][知乎 Flink 取代 Spark Streaming 的实战之路]]
+  - 补充链接 https://www.infoq.cn/article/Y1jbo_3ZMAQkMOm8loeY
+
+
+
+*** temp
+- kafka
+  - similar to RabbitMQ
+    - queue vs comsumer group
+    - exchange vs partitions
+  - replicate
+  - storage
+  - multi-cluster
+
+
+- flink & spark
+  - 比较
+    - connectors
+    - situation
+    - pros and cons
+  - 工作流
+
+
+- 流程
+  - 采样
+  - 传输
+  - 存储
+  - 分析
