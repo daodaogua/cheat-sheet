@@ -1,0 +1,64 @@
+** 介绍（[[https://docs.gitlab.com/ee/ci/runners/][ci部分大概介绍]]）
+- 类型
+  - a shared runner
+  - specific runners
+  - group runners
+    - for multi-projects for one group
+
+- configuring
+  - cache
+  - pick job for shared
+  - *Using shared Runners effectively*
+    - using tags(only run jobs that they are equipped to run)
+    - Allowing Runners with tags to pick jobs without tags
+    - Setting maximum job timeout for a Runner(precede project defined timeout)
+    - Be careful with sensitive information(about runner executors)
+    - forks
+    - Attack vectors in Runners
+    - Resetting the registration token for a Project(*)
+    - Determining the IP address of a Runner
+      - admin for shared
+      - without for specific
+
+- troubleshoot
+  - Why can’t I run more than one instance of Runner?
+
+
+** 使用流程([单独runner docs])
+- 查看整体的runner docs
+- install
+
+- register gitlab runner
+  - token
+    - admin/runner for shared
+    - without admin for specific([[https://docs.gitlab.com/ee/ci/runners/][docs]])
+      - lock(can assign it exclussively to a project)
+    - group owner for group
+  - register operate under different environments
+  - configuration
+    - configuration settings
+    - update config.toml manually
+    - usage of a configuration template file
+
+- using gitlab runner
+  - ...
+
+- selecting the executor
+  - Kubernetes
+    - The Kubernetes executor(?Pod-->1/N container)
+    - Workflow
+      - Prepare
+      - Pre-build
+      - Build
+      - Post-build
+    - Define keywords in the config toml
+    - Not supplying Git
+    - serverless(?)
+
+- configuring gitlab runner
+
+** 疑问（有解答）
+- 一个config.toml对应one instance of Runner
+- Runner instance 和 runner 什么关系？
+  - 同一概念
+- kubernetes的workflow由什么定义？config.toml?

@@ -1,0 +1,13 @@
+*** 最大的经验
+
+- 在安装驱动版本时，可能需要多试
+
+- 如果无法登录图形界面，可以命令行界面删除nvidia和/etc/X11/xorg.conf
+
+- 日志要看，然后仍然比对网上信息
+
+
+*** package
+- device driver
+- cuda
+- cudnn

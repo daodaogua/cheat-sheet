@@ -1,0 +1,25 @@
+** 参考资料
+- [[https://docs.gitlab.com/][官网docs]]
+
+
+** CI/CD
+- Introduction
+- Auto DevOps
+- Environment variables
+  - predefined variables
+  - syntaxs
+- Environment
+  - web terminals
+- Example
+- Interactive Web Terminals
+- pipeline (*)
+- gitlab runner
+  - https://docs.gitlab.com/runner/
+  - gitlab_runner.org
+- .gitlab-ci.yml
+
+
+*** TODO 补充学习清单
+- pipeline
+- .gitlab-ci.yml parameter details
+- runner configuration

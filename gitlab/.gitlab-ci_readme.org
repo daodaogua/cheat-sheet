@@ -1,0 +1,16 @@
+** [[https://docs.gitlab.com/ee/ci/yaml/README.html][官方文档说明]]
+- Validate the .gitlab-ci.yml(ci/lint)
+- Unavailable names for jobs
+- Configuration parameters
+- Setting default parameters
+- Parameter details(pipeline中解释)
+  - ...
+  - include
+    - Overriding external template values
+  - variables
+    - Git strategy(*)
+      - clone
+      - fetch
+      - none
+    - Shallow cloning
+      - GIT_DEPTH:
