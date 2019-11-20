@@ -1,0 +1,15 @@
+** 概念
+- 流处理
+  - 无界流
+- 批处理
+  - 有界流
+
+
+** 参考资料
+- [https://www.cnblogs.com/frankdeng/p/9400627.html]
+
+
+
+** temp
+- 搭建java环境
+  - java jdk 8[https://www.jianshu.com/p/7a04658af4f9]

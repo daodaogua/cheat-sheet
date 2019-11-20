@@ -1,0 +1,27 @@
+*** 笔记
+- [[https://ci.apache.org/projects/flink/flink-docs-release-1.9/dev/connectors/kafka.html][docs页]]
+- Flink Kafka Consumer integrates with Flink’s checkpointing mechanism to provide exactly-once processing semantics
+  - Flink does not purely rely on Kafka’s consumer group offset tracking, but tracks and checkpoints these offsets internally
+- In case of a job failure, Flink will restore the streaming program to the state of the latest checkpoint and re-consume the records from Kafka, starting from the offsets that were stored in the checkpoint
+
+
+*** content
+- Installing Apache Kafka
+- Kafka 1.0.0+ Connector
+  - Compatibility
+  - Migrating Kafka Connector from 0.11 to universal
+  - Usage
+- Kafka Consumer
+  - The DeserializationSchema
+  - Kafka Consumers Start Position Configuration
+  - Kafka Consumers and Fault Tolerance
+  - Kafka Consumers Topic and Partition Discovery
+  - Kafka Consumers Offset Committing Behaviour Configuration
+  - Kafka Consumers and Timestamp Extraction/Watermark Emission
+- Kafka Producer
+  - Kafka Producer Partitioning Scheme
+  - Kafka Producers and Fault Tolerance
+- Kafka Connector metrics
+- Troubleshooting
+  - Data loss
+  - UnknownTopicOrPartitionException

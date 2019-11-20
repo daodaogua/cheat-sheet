@@ -13,6 +13,9 @@
   - storage
   - multi-cluster
 
+- hadoop
+
+- yarn
 
 - flink & spark
   - 比较
@@ -27,3 +30,12 @@
   - 传输
   - 存储
   - 分析
+
+
+*** task
+- 端口
+- maven
+- java
+- scala
+- kafka
+  - python

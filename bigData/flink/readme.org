@@ -1,0 +1,459 @@
+** 概念
+- 流处理
+  - 无界流
+- 批处理
+  - 有界流
+
+
+** 参考资料
+- [[https://ci.apache.org/projects/flink/flink-docs-release-1.9/zh/tutorials/python_table_api.html][官网教程]]
+  - [[https://ci.apache.org/projects/flink/flink-docs-stable/][首页]]
+  - [[https://training.ververica.com][training]]
+- [https://www.cnblogs.com/frankdeng/p/9400627.html]
+- [http://ifeve.com/flink-quick-start/]
+- [[https://www.cnblogs.com/importbigdata/p/11431859.html][教程合集]]
+
+
+
+
+** temp
+- 搭建java环境
+  - java jdk 8[https://www.jianshu.com/p/7a04658af4f9]
+- 安装flink
+  - hadoop
+  - None
+- 三种模式
+  - local
+    - start_cluster
+  - cluster
+    - standalone
+    - yarn
+      - 资源管理器
+        - when taskManager fails, restart a new taskManager
+  - cloud
+
+- flink-python
+  - [examples]https://github.com/wdm0006/flink-python-examples
+
+  - build pyflink
+    - pyflink
+    - additional package: sdist, bdist_wheel
+
+- 疑问
+  - pyflink & flink
+    - 四个层级的抽象
+  - taskManager类似于进程X,考虑deploy
+  - 有图的概念，是个啥意思
+  - job写在client container里吗？
+  - parallelism 由job确定？
+  - 远程flink remote
+  - stream vs partition,查看图
+  - 到底用不用yarn
+
+- 环境部署
+  - https://ci.apache.org/projects/flink/flink-docs-release-1.9/zh/ops/deployment/cluster_setup.html
+
+
+*** TODO 概念学习
+    - table
+      - different type
+    - catalog
+    - database
+    - sql
+    - checkpoint
+    - slot
+      - 是否是taskmanager输出？用于fault-tolerance mechanism。
+    - 各类表操作
+    - 时间戳的问题
+      - 是根据哪个时间戳进行操作！
+    - job --> dataflow --> logical graph --> physical Graph --> task --> subtasks(?streams)(更好的图示)
+    - jobManager --> taskManagers --> taskSlots
+    - state --> event
+    - jar
+    - bound/unbound resource
+      - number of element
+    - map & reduce????
+    - jave heap or off-heap
+    - state serializer
+    - planner
+
+*** TODO Job submission examples 尝试
+
+*** TODO linux入门<2019-09-30>
+
+*** TODO 尝试不同的部署方案
+
+*** TODO 跑所有的examples，查看情况，代码理解
+
+*** TODO 调试部分
+
+*** TODO 其他（docs，。。。）
+
+*** TODO [#A] list
+- kafka
+  - python
+- flink docker deployment
+- pyflink 教程
+
+- log4j
+
+*** 安装攻略（MacOS）
+1. 下载源码build
+   - https://ci.apache.org/projects/flink/flink-docs-release-1.9/flinkDev/building.html#build-pyflink
+   - 才会有flink-python，直接pip安装pyflink，版本为1.0
+   - mvn clean install 使用加速
+2.
+
+*** python学习攻略(可以先浏览[[https://ci.apache.org/projects/flink/flink-docs-release-1.0/][1.0docs]]，结构更清晰)
+1. demo学习
+   - https://ci.apache.org/projects/flink/flink-docs-release-1.9/tutorials/python_table_api.html
+2. 快速python_doc
+   - https://ci.apache.org/projects/flink/flink-docs-release-1.9/api/python/
+   - package
+     - common
+     - table
+     - dataset
+     - datastream
+3. 深入python_doc和其他案例
+4. 实战
+
+*** 快速官网教程
+- configuration
+  - ? 放在哪
+
+**** Concepts
+- programming model
+  - Levels of Abstraction
+    - SQL (high-level)
+    - Table API (declarative DSL)
+    - DataStream/DataSet API (core APIs)
+    - Stateful Stream Processing (low-level)
+  - Programs & Dataflow
+  - Parallel Dataflows
+    - one-to-one streams
+    - redistributing streams
+  - Window
+  - Time
+    - event time
+    - ingestion time
+    - processing time
+  - Stateful Operations
+  - Checkpoints for Fault Tolerance
+  - Batch on Streaming
+
+- Distributed Runtime
+  - Tasks and Operator Chains
+    - task & subtasks & parallel threads
+  - Job Managers, Task Managers, Clients
+    - JobManagers(masters): *[[https://ci.apache.org/projects/flink/flink-docs-release-1.9/concepts/runtime.html][definition]]*
+    - TaskManagers
+    - client(prepare and send dataflow to the jobmanager): *[[https://ci.apache.org/projects/flink/flink-docs-release-1.9/concepts/runtime.html][definition]]*
+  - Task Slots and Resources
+    - *task slot:* (a fixed subset of resources of the TaskManager)
+      - slot sharing
+  - State Backends
+    - related to checkpoint
+  - Savepoints
+    - rely on checkpoint
+
+- Glossary
+  - Flink Application Cluster
+  - Flink Cluster
+  - Event
+  - ExecutionGraph
+  - Function
+  - Instance
+  - Flink Job
+    - be subitted to
+      - Flink Session Cluster
+      - Flink Application Cluster
+  - JobGraph
+  - Flink JobManager
+  - Logical Graph
+    - node: Operator
+    - edges:
+  - Managed State
+  - Flink Master(*)
+    - Flink Resource Manager
+    - Flink Dispatcher
+    - one Flink JobManager per running Flink Job
+  - Operator
+  - Operator Chain(*)
+  - Partition
+  - Physical Graph
+    - node: Tasks
+    - edges:
+  - Record
+  - Flink Session Cluster(a flink Cluster in session mode)
+  - State Backed(?不太理解）
+  - Sub-Task(processing partition)
+  - Task(同Sub-Task有什么差别)
+  - Flink TaskManager
+  - Transformation
+    - data streams or data sets
+    - partitions
+
+
+
+**** Application Development
+- Project Build Setup
+  - Flink core and application dependencies
+    - flink core dependencies(flink-dist)
+    - user application dependencies
+      - connectors, formats, libraries
+      - *special* hadoop()
+- Basic API Concepts
+  - DataSet and DataStream
+  - Anatomy of Flink Program
+    1. Obtain an execution environment
+    2. Load/create the initia data
+    3. Specify transformations on this data
+    4. Specify where to put the results of your computations
+    5. Trigger the program execution
+  - Lazy Evaluation
+  - Specifying Keys
+  - Specifying Transformation Functions(*)
+  - Supported Data Types
+  - Accumulators & Counters
+- Streaming(DataStream API)
+  - Overview
+    - Example Program
+    - Data Sources
+    - DataStream Transformations
+    - Data Sinks
+    - Iterations
+    - Execution Parameters
+      - Fault Tolerance
+      - Controlling Latency
+        - buffer, fill up time
+    - Debugging
+      - Local Execution Environment
+      - Collection Data Sources
+      - Iterator Data Sink
+  - Event Time
+    - Overview
+      - Event Time/Processing Time/Ingestion Time
+        - Setting a Time Characteristic
+      - Event Time and Watermarks
+        - Watermarks in Parallel Streams
+        - Late Elements
+        - Idling sources
+        - Debugging Watermarks
+        - How operators are processing watermarks
+    - Generating Timestamp/Watermarks
+      - Assigning Timestamps
+        - Source Functions with Timestamps and Watermarks
+        - Timestamp Assigners/Watermark Generators
+      - Timestamps per Kafka Partition
+    - Pre-defined Timestamp Extractors/Watermark Emitters
+      - Assigners with ascending timestamps
+      - Assigners allowing a fixed amount of lateness
+  - State & Fault Tolerance
+    - Working with state
+      - Keyed State and Operator State
+        - Keyed State
+        - Operator State
+      - Raw and Managed State
+      - Using Managed Keyed State
+        - Available state primitives(operator&state)
+          - ValueState
+          - ListState
+          - ReducingState
+          - AggregatingState
+          - FoldingState
+          - MapState
+        - State Time-To-Live(TTL)
+        - State in the Scala DataStream API
+      - Using Managed Operator State
+        - Stateful Source Functions
+    - The Broadcast State Pattern(2stream?)
+      - Provided APIs
+        - BroadcastProcessFunction and KeyedBroadcastProcessFunction
+      - Important Considerations
+    - Checkpointing
+      - Prerequisites
+      - Enabling and Configuring Checkpointing
+        - Related Config Options
+      - Selecting a State Backend
+      - State Checkpoints in Iterative Jobs
+      - Restart Strategies
+    - Queryable State(Beta)
+    - State Backend
+    - State Schema Evolution
+      - Evolving state schema
+      - Supported data types for schema evolution
+        - POJO types
+        - Avro types
+      - Custom Serialization for Managed State(ignored)
+  - Operators
+    - Overview
+      - Datastream Transformation
+        - Map/FlatMap/Filter/KeyBy/Reduce/Fold/Aggregations/Window/WIndowAll/WindowApply/WindowReduce/WindowFold/AggregationsOnWindows/Union/WindowJoin/IntervalJoin/WindowCoGroup/Connect/CoMap/CoFlatMap/Split/Select/Iterate/ExtractTimestamps
+        - Project
+      - Physical partitioning
+        - Custom partitioning/Random partitioning/Rebalancing(Round-robin partitioning)/Rescaling/Broadcasting
+      - Task chaining and resource groups
+        - Start new chain/Disable chaining/Set slot sharing group
+    - Windows
+      - Window Lifecycle
+      - Keyed vs Non-Keyed Windows
+      - Window Assigners
+        - Tumbling Windows
+        - Sliding Windows
+        - Session Windows
+        - Global Windows
+      - Window Functions
+        - ReduceFunction
+        - AggregateFunction
+        - FoldFunction
+        - ProcessWindowFunction
+        - ProcessWindowFunction with Incremental Aggregation
+        - Using per-window state in ProcessWindowFunction
+        - WindowFunction(Legacy)
+      - Triggers
+        - Fire and Purge
+        - Default Triggers of WindowAssigners
+        - Built-in and Custom Triggers
+      - Evictors
+      - Allowed Lateness
+        - Getting late data as a side output
+        - Late elements considerations
+      - Working with window results
+        - Interaction of watermarks and windows
+        - Consecutive windowed operations
+      - Useful state size considerations
+    - Joining
+      - Window Join
+        - Tumbling Window Join
+        - Sliding Window Join
+        - Session Window Join
+      - Interval Join
+    - Process Function(waiting)
+    - Async I/O(waiting)
+  - Connectors
+    - Overview
+      - Predefined Sources and Sinks
+      - Bundled Connectors
+      - Connectors in Apache Bahir
+      - Other Ways to Connect to Flink
+        - Data Enrichment via Async I/O
+        - Queryable State
+    - Fault Tolerance Guarantee
+      - sink(without RabbitMQ?)
+    - Kafka(empty)
+    - RabbitMQ
+- Table API & SQL
+  - Overview
+    - Dependencies
+  - Concepts & Common API
+    - Main Differences Between the Two Planners
+    - Structure of Table API and SQL Programs
+    - Create a TableEnvironment
+    - Register Tables in the Catalog
+      - Register a Table
+      - Register a TableSource
+      - Register a TableSink
+    - Register an External Catalog
+    - Query a Table
+      - Table API
+      - SQL
+      - Mixing Table API and SQL
+    - Emit a Table
+    - Translate and Execute a Query
+    - Integration with DataStream and DataSet API
+      - Implicit Conversion for Scala
+      - Register a DataStream or DataSet as Table
+      - Convert a DataStream or DataSet into a Table
+      - Convert a Table into a DataStream or DataSet
+      - Mapping of Data Types to Table Schema
+    - Query Optimization
+      - Explaining a Table
+  - Data Types
+    - Data Type
+      - Data Types in the Table API
+    - Planner Compatibility
+      - Old Planner
+      - New Blink Planner
+    - Limitations
+    - List of Data Types
+      - Character Strings
+      - Binary Strings
+      - Exact Numerics
+      - Approximate Numerics
+      - Date and Time
+      - Constructured Data Types
+      - Other Data Types
+  - Streaming Concepts
+    - Dynamic Tables
+      - Relational Queries on Data Streams
+      - Dynamic Tables & Continuous Queries
+      - Defining a Table on a Stream
+        - Continuous Queries
+        - Update and Append Queries
+        - Query Restrictions
+      - Table to Stream Conversion
+    - Time Attributes
+      - Introduction to Time Attributes
+      - Processing time
+        - During DataStream-to-Table Conversion
+        - Using a TableSource
+      - Event time
+        - During DataStream-to-Table Conversion
+        - Using a TableSource
+    - Joins in Continuous Queries(empty)
+      - Regular Joins
+      - Time-windowed Joins
+      - Join with a Temporal Table Function
+        - Usage
+        - Processing-time Temporal Joins
+        - Event-time Temporal Joins
+      - Join with a Temporal Table
+        - Usage
+    - Temporal Tables(empty)
+      - Motivation
+        - Correlate with a changing history table
+        - Correlate with a changing dimension tabe
+      - Temporal Table Function
+        - Defining Temporal Table Function
+      - Temporal Table
+        - Defining Temporal Table
+    - Query Configuration
+      - Idle State Retention Time
+  - Connect to External Systems(**important)
+  - Table API(**Important)
+  - SQL(**Important)
+  - Built-In Functions(**Important)
+  - User-defined Sources & Sinks
+  - User-defined Functions
+  - Catalogs
+  - Configuration
+  - Performance Tuning
+    - Streaming Aggregation
+- Data Types & Serialization
+  - Overview
+  - Custom Serializers
+- Managing Execution
+......
+
+
+
+
+
+**** Deployment & Operations
+- Clusters & Deployment
+
+
+
+*** 学习攻略
+- 快速getting started及相关基本内容
+- 安装攻略（MacOS）
+  - 1.
+- python学习攻略
+  - 1. 2.
+- 快速官网教程
+- 全面学习并文档记录
+  - 安装，python学习攻略，java代码等
+
+
+*** 经验
+- 不同的系统有多种安装软件的方法，源码可能是最全的方式，可以将所有方法都看看，着重看看源码

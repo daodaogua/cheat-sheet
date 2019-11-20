@@ -1,0 +1,6 @@
+- brew是macOS安装包管理工具
+
+** 命令
+- brew list
+- brew info
+- brew install

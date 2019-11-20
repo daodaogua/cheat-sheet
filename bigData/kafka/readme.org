@@ -1,0 +1,62 @@
+*** 资源
+- [[http://kafka.apache.org/documentation/][官网docs]]
+  - quick start
+  - documents
+- [[https://kafka-python.readthedocs.io/en/master/usage.html][python教程]]
+
+*** 概念
+- core API
+  - Producer API
+    - producer type
+      - transation
+      - idempotent
+    - session on/off
+    - other properties
+  - Consumer API
+    -
+
+  - Streams API
+  - Connector API
+  - common
+    - serialization
+      - 对象数据流化传输（读写）
+      - 参考
+        - 0. https://www.cnblogs.com/chenmingjun/p/9746310.html
+        - 1. https://baijiahao.baidu.com/s?id=1633305649182361563&wfr=spider&for=pc
+      - key_serializer
+      - value_serializer
+
+
+*** 目录
+- http://kafka.apache.org/documentation/#majordesignelements
+
+
+*** terminologies
+- topics
+- partition
+- node
+- broker
+  - server
+- listener
+
+
+*** 优点
+- multi-subscriber
+- scale-processing
+- partition scaling
+- better fault-tolerance
+- data writen to Kafka is written to disk
+
+- ordering？
+- 伸缩
+- 容错
+- 模型统一简洁
+
+*** 特点
+- messaging, storage, stream processing
+
+
+*** 部署
+- docker部署
+  - [[https://segmentfault.com/a/1190000020715650?utm_source=tag-newest][listener配置参考]]
+  - [[https://www.jianshu.com/p/37d0d22cb6cc][分布式部署配置]]

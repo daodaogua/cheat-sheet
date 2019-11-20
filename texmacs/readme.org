@@ -1,0 +1,10 @@
+*** 资料
+- [[http://www.texmacs.org][官网docs]]
+- [[https://github.com/texmacs/texmacs][github repo]]
+
+
+*** 学习流程
+- 官网下载
+- 下载页学习说明
+  - 选择[[http://www.texmacs.org/tmweb/help/tutorial.en.html][tutotial]]
+  - 中文字体问题

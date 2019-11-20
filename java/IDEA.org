@@ -1,0 +1,32 @@
+*** 学习流程
+- 安装
+- 配置
+  - 后续可能需要更改配置可查看（https://www.jetbrains.com/help/idea/run-for-the-first-time.html）
+
+
+*** 资源
+- [[https://www.jetbrains.com/help/idea/guided-tour-around-the-user-interface.html][官方文档]]
+- [[https://github.com/judasn/IntelliJ-IDEA-Tutorial][中文文档]]
+
+
+*** 创建项目流程
+- spring boot
+- build tools
+- structure
+  - project
+    - module
+      - package
+        - class
+        - interface
+
+
+
+*** 配置
+- maven项目需要配置jdk版本, [https://blog.csdn.net/l1028386804/article/details/81138293]
+
+
+*** 插件
+- maven
+
+
+- gradle

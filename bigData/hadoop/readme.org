@@ -1,0 +1,37 @@
+- 分布式文件系统HDFS，分布式计算MapReduce，易于扩展和高容错率的大数据处理工具。
+
+** 资料
+- [][官网教程]]
+- [[https://www.yiibai.com/hadoop/][某教程]]
+
+
+** 概念
+- mode
+  - local/standalone
+  - simulated distributed
+    - used to test/debug
+  - cluster
+    - produce
+
+- HDFS
+  - NameNode
+    - metaData
+  - DataNode
+    - Data
+- Distribute computing
+  - Client
+  - Job(standby)
+  - Task
+- MapReduce
+  - Mapping(split,map)
+  - Reduce(shuffle,reduce)
+
+- tools
+  - Sqoop
+    - Batch
+  - Flume
+    - Stream
+  - Pig
+    - simplize MapReduce program
+  - Hive
+    - easily deal with data from different DBs

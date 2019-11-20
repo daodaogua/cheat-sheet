@@ -1,0 +1,14 @@
+*** API
+- KafkaConsumer
+- KafkaProducer
+- KafkaAdminClient(unstable)
+  - A class for administering the Kafka cluster
+    - (create-partition...)
+- KafkaClient
+  - A network client for asynchronous request/response network I/O.
+  - This is an internal class used to implement the user-facing producer and consumer clients.
+  - This class is not thread-safe!
+- BrokerConnection
+  - Initialize a Kafka broker connection
+- ClusterMetadata
+  - This class does not perform any IO. It simply updates internal state given API responses (MetadataResponse, GroupCoordinatorResponse)

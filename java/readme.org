@@ -1,0 +1,54 @@
+** 资料
+- [[https://www.runoob.com/java/java-tutorial.html][菜鸟教程]]
+- [[https://www.liaoxuefeng.com/wiki/1252599548343744][廖雪峰教程]]
+- [[https://docs.oracle.com/javase/8/docs/api/overview-summary.html][java包docs]]
+
+
+** java版本及相关资料
+- javaSE
+- javaEE
+  - https://blog.csdn.net/Neuf_Soleil/article/details/80962686
+- javaME
+
+
+** 概念
+- jar
+- maven
+
+
+** temp
+- next：实例
+- next: IDE
+
+- 包的安装
+- 环境中导入
+- 包导入
+- 运行
+
+** 代码规范
+- 参考阿里云
+
+** 开发环境
+- IDEA
+
+** 开发框架
+- JavaEE
+  - spring
+  - SSH
+  - SSM
+
+** 软件
+- Tomcat
+- maven
+
+** 笔记
+- project
+  - package
+    - class(file)
+- import
+  - java.lang下面的包不用导入
+    - system
+    - 类型
+    - 其他
+      - Thread
+  - 同级包下的类

@@ -1,0 +1,10 @@
+** 入门操作
+- 安装
+- 写docker-compose.yml
+- docker-compose build
+- docker-compose up
+
+** 资料
+- https://www.jianshu.com/p/2191d2464248
+- https://www.cnblogs.com/williamjie/p/9103327.html
+- [[https://docs.docker.com/compose/compose-file/][compose file docs]]
