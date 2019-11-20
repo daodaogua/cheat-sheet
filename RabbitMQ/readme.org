@@ -1,0 +1,5 @@
+** 概念
+
+- TTL（Time To Live）
+- Dead Letter Exchanges
+  - pika的参考资料，如何设置TTL和Dead Letter Exchange https://www.cnblogs.com/hello-/articles/10339602.html

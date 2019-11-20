@@ -6,6 +6,10 @@
 
 - 日志要看，然后仍然比对网上信息
 
+- 安装驱动时，需要参数--no-opengl-files
+
+- sudo dpkg -P 手动卸载
+
 
 *** package
 - device driver

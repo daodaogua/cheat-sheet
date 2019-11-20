@@ -1,0 +1,31 @@
+*** 参考资料
+- [[https://blog.csdn.net/somezz/article/details/83104368][快速入门]]
+- [[https://apscheduler.readthedocs.io/en/v2.1.2/][官方文档]]
+
+*** 概念
+- 调度器
+- 执行器
+- 作业存储器
+- 触发器
+
+**** 细节设置
+- 执行器
+  - ThreadPoolExecutor， 多线程，可设置最大线程数
+  - ProcessPoolExecutor, 多进程，可设置最大进程数
+  - 两者，thread默认，process二级执行器
+    - executors = {
+      'default': ThreadPoolExecutor(20),
+      'processpool': ProcessPoolExecutor(5)}
+- job_defaults: (可以在scheduler定义时，也可以是add_job时)
+  - max_instances: int
+    - job阻塞时，可最大同时运行的数量
+  - misfire_grace_time：int(s)
+    - 没调度上，最大延迟的时间
+  - coalesce: bool
+    - True: 多个没调度上的相同job，合并为一个
+
+- listener:
+  - add_listener: func
+
+- 任务持续性
+  - 需要jobstore为db

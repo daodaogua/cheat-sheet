@@ -1,0 +1,13 @@
+*** 资料
+- [[https://github.com/xueruini/thuthesis][清华latex论文模板]]
+  - 同github账号下有latex其他说明
+
+*** TODO [#C] 安装
+- 基于emacs
+  - sudo apt-get install auctex
+    ....
+
+*** 流程（类似css）
+- 编写源码
+- 编译
+- 发布
