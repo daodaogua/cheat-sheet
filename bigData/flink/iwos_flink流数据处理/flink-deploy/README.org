@@ -1,0 +1,8 @@
+- 部署flink & kafka
+  - cd playground/
+  - cat README.org
+
+- 部署自定义service
+  - vi docker-compose.yaml
+    - 修改 KAFKA_CREATE_TOPICS: "input:2:1, output:2:1"
+    - 添加service（[[https://github.com/apache/flink-playgrounds/blob/master/operations-playground/docker-compose.yaml][参考资料]]）

@@ -1,0 +1,21 @@
+#+title: google cloud 服务
+
+*** 资料
+- [[https://cloud.google.com/docs][官方文档]]
+
+*** cloud构架个人理解
+- 权限
+  - 账户帐号?Owner?
+    - 授予IAM,...
+
+  - 服务帐号IAM
+    - 管理服务
+      - 服务帐号
+      - OAuth
+      - apikey: 公开数据
+
+
+*** 服务介绍
+- calendar API (https://developers.google.com/calendar/v3/reference)
+  - opensource: apikey
+    - open holidays: calendar里面可以搜索订阅公开的日历,其中有holidays日历,holiday里能查到calendarId,在API介绍的试用里能找到open calendarId.

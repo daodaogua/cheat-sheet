@@ -1,0 +1,29 @@
+*** python2字符编码
+- https://blog.csdn.net/u013946404/article/details/78200837
+
+**** 类型说明
+- 字符数据类型: str("",''), unicode(u"",u'')
+- 编码类型: ascii,unicode,
+unicode是一种编码标准，具体的实现标准可能是utf-8，utf-16，gbk ……
+
+**** 操作
+- 设置python解释器默认编码类型(初始为ascii)
+  - import sys
+  - reload(sys)
+  - sys.setdefaultencoding('utf-8')
+- 设置python脚本存储编码方式(初始为ascii)
+  - # -*- coding: utf-8 -*-
+- 编码类型转换
+  - encode
+    - a.encode(typeB)
+      - 原始-->unicode-->typeB
+  - decode
+    - a.decode(typeB)
+      - typeB-->unicode(-->ascii)
+
+**** 其他说明
+- 数据存储
+  - 数据存储为(数据,数据类型)二进制,没有数据的编码方式
+- 显示
+  - "\x..\" 8bit(ascii)
+  - "\u....\" 16bit(unicode)

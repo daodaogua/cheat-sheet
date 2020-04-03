@@ -1,0 +1,8 @@
+#+title: WSGI：Web Server Gateway Interface
+*** 文档
+- [[https://www.liaoxuefeng.com/wiki/897692888725344/923057027806560][廖雪峰文档]]
+
+
+
+*** 其他参考
+- [[https://blog.csdn.net/xiaoming100001/article/details/81109617][http vs https]]

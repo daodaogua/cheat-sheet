@@ -1,11 +1,16 @@
 *** 资料
 - [[https://github.com/xueruini/thuthesis][清华latex论文模板]]
   - 同github账号下有latex其他说明
+- emacs + latex
+  - [[https://linux.cn/article-10269-1.html][如何使用 Emacs 创建 LaTeX 文档]]
 
 *** TODO [#C] 安装
 - 基于emacs
   - sudo apt-get install auctex
     ....
+  - 安装texlive
+    - https://blog.csdn.net/kingolie/article/details/80790657
+
 
 *** 流程（类似css）
 - 编写源码

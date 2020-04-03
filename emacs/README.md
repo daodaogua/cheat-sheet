@@ -1,5 +1,6 @@
 ### 参考资料
 [mastering-emacs-in-one-year-guide](https://github.com/redguardtoo/mastering-emacs-in-one-year-guide) <br>
+[从零开始——Emacs 安装配置使用教程 2015](https://www.jianshu.com/p/b4cf683c25f3) <br>
 [emacsWiki](https://www.emacswiki.org/)
 
 #### 推荐配置

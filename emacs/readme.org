@@ -1,0 +1,16 @@
+*** 说明
+- emacs使用的语言是elisp
+  - learn elisp: learn-emacs-lisp.el
+
+
+*** TODO 熟悉emacs配置和elisp
+- [[https://www.jianshu.com/p/b4cf683c25f3][参考资料]]
+- elisp命令
+  - require
+  - load
+  - autoload
+- 插件管理
+  - elpa
+- 安装插件并使用
+  - auctex
+  - texlive

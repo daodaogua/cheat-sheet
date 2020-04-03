@@ -1,0 +1,59 @@
+*** 部署
+**** docker
+- 查看flink-deploy
+**** 容错机制
+- checkpoint
+  - 需要在代码中配置([[https://github.com/apache/flink-playgrounds/blob/master/docker/ops-playground-image/java/flink-playground-clickcountjob/src/main/java/org/apache/flink/playgrounds/ops/clickcount/ClickEventCount.java][参考代码java]])
+  - [[https://ci.apache.org/projects/flink/flink-docs-release-1.9/zh/ops/state/checkpoints.html][docs]]
+- savepoint
+  - [[https://ci.apache.org/projects/flink/flink-docs-release-1.9/zh/ops/state/savepoints.html][docs]]
+
+*** 应用开发
+**** 说明
+- 微服务
+- 编程语言, java, python都可以, java文档更全
+**** 任务类型
+- 流数据实时处理
+  - 单/多
+- 流数据统计
+  - 单/多
+**** 编程语言
+- java
+  - [[https://ci.apache.org/projects/flink/flink-docs-release-1.9/zh/dev/projectsetup/java_api_quickstart.html][项目构建设置docs]]
+- python
+  - [[https://ci.apache.org/projects/flink/flink-docs-release-1.9/zh/flinkDev/building.html#build-pyflink][构建pyflink]]
+    - 编程模型使用的抽象级别为:tableAPI
+  - 特别说明：如果需要安装新版的pyflink必须使用上面的说明，pip安装的是1.0版本(*flink*)
+**** 编程模型抽象级别的挑选
+- [[./material/编程模型抽象级别.png]]
+- 推荐: java主要使用coreAPIs(文档全，功能稳定), python使用declarativeDSL
+- 推荐使用：stream(流数据)处理(flink相较于spark的优势)
+**** java StreamAPI
+- [[https://github.com/apache/flink-playgrounds/tree/master/docker/ops-playground-image/java/flink-playground-clickcountjob][项目模板]]
+- [[https://ci.apache.org/projects/flink/flink-docs-release-1.9/zh/dev/datastream_api.html][docs]]
+**** python tableAPI
+- pyflink
+  1. [[https://ci.apache.org/projects/flink/flink-docs-release-1.9/tutorials/python_table_api.html][demo学习]]
+  2. [[https://ci.apache.org/projects/flink/flink-docs-release-1.9/api/python/][docs]]
+- flink
+  - 有example
+**** 推荐学习顺序
+- getting started
+  - https://ci.apache.org/projects/flink/flink-docs-release-1.9/zh/getting-started/tutorials/datastream_api.html
+- StreamAPIs
+  - 概览
+  - Event Time
+  - *算子*
+  - Connectors
+    - Kafka
+**** 制作模板
+- 包含内容
+  - 基本配置
+  - Checkpoint配置
+  - 流程
+    - 环境
+    - source
+    - *operator* (自定义部分，对应算子)
+    - sink
+  - Kafka Connector
+  - Serialization/Deserilization
