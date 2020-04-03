@@ -1,5 +1,5 @@
-## cheat-sheet
-- 收藏各种小抄
+## cs-skill
+- 收藏各种cs技能或功能指南和总结
 - 可能包含简单使用指南
 
 ### [emacs](https://github.com/daodaogua/cheat-sheet/tree/master/emacs)
