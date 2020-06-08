@@ -80,7 +80,9 @@
   - #+ATTR_HTML: :/#+ATTR_ORG: :/#+ATTR_latex: :    width 
 
 * 链接                                                :TOC:QUOTE:
+#+BEGIN_QUOTE
    - ./
    - [[][]]
    - [[#跳转][跳转]]
+#+END_QUOTE
 
