@@ -1,4 +1,6 @@
-
+#+LANGUAGE: zh
+#+TEXINFO_DIR_CATEGORY: Emacs
+#+OPTIONS: ^:{} toc:nil H:5 num:0
 
 ** jump
 ** 大纲模式
