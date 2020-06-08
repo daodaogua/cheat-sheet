@@ -1,6 +1,6 @@
-#+LANGUAGE: zh
 
-** 跳转
+
+** jump
 ** 大纲模式
 *** 视图显示
   - S-TAB      全局视图循环
@@ -85,6 +85,6 @@
 #+BEGIN_QUOTE
    - ./
    - [[][]]
-   - [[#跳转][跳转]]
+   - [[#jump][jump]]
 #+END_QUOTE
 
