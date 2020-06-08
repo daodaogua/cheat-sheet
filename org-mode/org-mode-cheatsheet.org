@@ -1,8 +1,3 @@
-#+LANGUAGE: zh
-#+TEXINFO_DIR_CATEGORY: Emacs
-#+OPTIONS: ^:{} toc:nil H:5 num:0
-
-** jump
 ** 大纲模式
 *** 视图显示
   - S-TAB      全局视图循环
