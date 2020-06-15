@@ -78,12 +78,5 @@
   - #+CAPTION:
   - #+ATTR_HTML: :/#+ATTR_ORG: :/#+ATTR_latex: :    width 
 *** 表格
-  - [[./table_template.org]]
-
-* 链接                                                :TOC:QUOTE:
-#+BEGIN_QUOTE
-   - ./
-   - [[][]]
-   - [[#jump][jump]]
-#+END_QUOTE
+  - [[./table_template.jpg]]
 
