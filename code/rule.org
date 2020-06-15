@@ -1,0 +1,28 @@
+#+title: 代码规则
+
+*** 命名规则
+- 变量: aaBb
+- 函数(接口): aa_bb
+  - 常用: get_, is_, find_, post_, make_, build_,
+- 内部函数: _aa_bb
+  - 一般不对外
+- 抽象类: AaBb
+- 模块: aa_bb
+- 常量: AA_BB/AABB
+
+*** 结构规则
+**** 代码分区
+- lib/core (核心代码)
+- cloud/otherpublish...
+  - 微服务
+- tools(对内)
+- bigfile
+- config
+
+*** 书写规则
+- 函数尽量不超过50行
+- 尽量面对对象
+- 函数中每行代码同抽象级
+- 不要有重复代码
+- 一定程度写注释
+- 一般测试代码写在代码同一文件内

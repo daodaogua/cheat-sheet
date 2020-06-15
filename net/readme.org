@@ -1,0 +1,9 @@
+** 网络查看工具
+- ping
+- telnet
+  - telnet ip port
+    - 查看端口开放情况
+- netstat
+  - netstat -nr / route
+    - 查看路由
+- ipconfig / ifconfig

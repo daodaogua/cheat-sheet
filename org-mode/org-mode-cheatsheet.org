@@ -78,6 +78,8 @@
   - 图上方
   - #+CAPTION:
   - #+ATTR_HTML: :/#+ATTR_ORG: :/#+ATTR_latex: :    width 
+*** 表格
+  - [[./table_template.org]]
 
 ** 链接
    - ./
