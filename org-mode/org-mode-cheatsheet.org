@@ -1,4 +1,3 @@
-** 跳转
 ** 大纲模式
 *** 视图显示
   - S-TAB      全局视图循环
@@ -81,8 +80,10 @@
 *** 表格
   - [[./table_template.org]]
 
-** 链接
+* 链接                                                :TOC:QUOTE:
+#+BEGIN_QUOTE
    - ./
    - [[][]]
-   - [[#....][跳转]]
+   - [[#jump][jump]]
+#+END_QUOTE
 
