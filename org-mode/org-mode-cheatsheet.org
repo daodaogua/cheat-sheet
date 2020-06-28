@@ -78,5 +78,12 @@
   - #+CAPTION:
   - #+ATTR_HTML: :/#+ATTR_ORG: :/#+ATTR_latex: :    width 
 *** 表格
+| student  | maths | physics | mean      |
+|----------+-------+---------+-----------|
+| bertrand |    13 |      09 | [formula] |
+| henri    |    15 |      14 |           |
+| arnold   |    17 |      13 |           |
+
+- 光标置于表头, C-c } 显示可视化网格
   - [[./table_template.jpg]]
 

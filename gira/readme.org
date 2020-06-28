@@ -1,0 +1,17 @@
+#+title: jira的简单使用
+
+** TODO jira上的功能按钮
+- Dashboards: 查看整体的情况
+- Projects: 查看某一项目情况
+  - 看板
+    - backlog
+    - Kanban board: 一共有哪些工作
+      - 只看我
+    - releases: 规划发布版本
+  - SCRUM
+    - backlog: 整体情况
+    - active sprints: 时间进度管理
+    - releases: 规划发布版本
+- Create: 创建
+  - epic: 多个任务
+  - task: 单个任务
