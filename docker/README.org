@@ -24,8 +24,8 @@
 - image inspect
   - 重点：CMD, entrypoint
 
-*** 使用容器
-- run 创建或运行一个容器(交互式,后台,一次性)
+*** 使用镜像/容器
+- run 创建或运行一个镜像(交互式,后台,一次性)
   - eg.(交互式) docker run -i -t <container> /bin/bash
 - exec 进入正在运行的容器（交互式）
   - docker exec -it <container> /bin/sh

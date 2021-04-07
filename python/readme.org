@@ -27,3 +27,12 @@ unicode是一种编码标准，具体的实现标准可能是utf-8，utf-16，gb
 - 显示
   - "\x..\" 8bit(ascii)
   - "\u....\" 16bit(unicode)
+
+
+** 工具包
+*** tkinter
+- 查看字体
+  - from tkinter import Tk, font
+  - root = Tk()
+  - font.families()
+- https://blog.csdn.net/ahilll/article/details/81531587
